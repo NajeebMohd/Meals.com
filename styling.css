@@ -1,0 +1,221 @@
+body{margin:0;}
+h1{margin:0;}
+#navbar{
+    height: 8vh;
+    width: 100vw;
+    /* border: 2px solid black; */
+    position: fixed;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5913e;
+    /* background-color: #fa8a2d; */
+}
+#Icon img{
+    height: 100%;
+    width: 55px;
+}
+#Icon{
+    height: 100%;
+    width: 25%;
+    min-width: 200px;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    
+    
+    
+}
+#Icon h2{
+    margin-left: 8px;
+    letter-spacing: 1px;
+    font-family:cursive;
+}
+#navLists{
+    height: 100%;
+    width: 25%;
+    /* border:2px solid black; */
+}
+#navLists ul{    
+    list-style-type: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+}
+#navLists ul li{       
+    margin: 0;
+    padding:0;    
+    /* display: inline; */
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    height: 50%;
+    width: auto;
+    padding: 2%;
+    border-radius: 1rem;
+}
+#navLists a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: cursive;
+    
+}
+#navLists li:hover{
+    background-color:lightgoldenrodyellow;
+}
+#search{
+    height: 70%;
+    width: 70%;
+}
+#searchBox{
+    height: 100%;
+    width: 15%;    
+    display: flex;
+    align-items: center;
+    /* justify-content: center;    */
+    /* border: 2px solid black;  */
+}
+#searchBox button{
+    height: 70%;
+    width: 20%;
+}
+
+/* ----------------------------- HEADER ------------------------------------------------------ */
+
+
+header{
+    height: 60vh;
+    width: 100vw;
+    background-image: url(images/imageE1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* opacity: 0.8; */
+}
+#name{
+    margin-top: 8%;
+}
+#name h1{
+    color:white;
+    font-size: 55px;
+    letter-spacing: 2px;
+    font-family: Okra, Helvetica, sans-serif;
+    
+}
+#discription{
+    height: 20%;
+    width: 90%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+#discription h2{
+    color:white;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-weight: 500;
+    font-family: cursive;
+    
+}
+#searchBox2{
+    height: 10%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+#search2{
+    height: 100%;
+    width: 50%;
+
+}
+#btn2{
+    height: 100%;
+    width: 10%;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #fc8019;
+    color: white;
+    border: none;   
+    box-sizing:border-box;
+}
+
+#btn2:hover{
+    background-color: orangered;
+    color: black;
+}
+
+
+/* ----------------------------------FOR RELIABLE SCREENS----------------------------- */
+
+@media screen and (max-width:1200px) {
+    #Icon{
+
+    }   
+    #navLists{
+        width: 40%;
+    } 
+    #navLists ul{
+        justify-content: space-between;
+    }
+    #searchBox{
+        width:18%
+
+    }
+    #search2{
+        width: 60%;
+    }
+    #btn2{
+        width: 15%;
+    }
+    #discription h2{
+        font-size:1.3rem;
+    }
+    #name{
+        margin-top: 12%;
+    }
+
+    
+}
+@media screen and (max-width:900px) {
+    #Icon{
+        width: 30%;
+    }   
+    #navLists{
+        width: 50%;
+    } 
+    #navLists ul{
+        justify-content: space-around;
+    }
+    #searchBox{
+        width:20%
+
+    }
+    #search2{
+        width: 80%;
+    }
+    #btn2{
+        width: 20%;
+    }
+    #discription h2{
+        font-size:1.1rem;
+    }
+    #name{
+        margin-top: 20%;
+    }
+    
+}
