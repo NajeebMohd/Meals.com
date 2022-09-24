@@ -8,9 +8,9 @@ function fetchImg(Img,detail){
         var json = JSON.parse(request.response); 
         var imageURL = json.meals[0].strMealThumb;
         var name = json.meals[0].strMeal;
-        detail.innerText = name+'';
+        detail.innerText = name;
         Img.src = imageURL;
-        console.log(json,' tisss');
+        // console.log(json,' tisss');  // Video Explanation how to fetch from json
     }
     request.onerror = function(){
         console.log("UNABLE TO FETCH..");
