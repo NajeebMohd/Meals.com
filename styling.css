@@ -75,6 +75,7 @@ h1{margin:0;}
 #search{
     height: 70%;
     width: 70%;
+    border-radius: 0.5rem;
 }
 #searchBox{
     height: 100%;
@@ -87,6 +88,7 @@ h1{margin:0;}
 #searchBox button{
     height: 70%;
     width: 20%;
+    border-radius: 0.5rem;
 }
 
 #bar{
@@ -133,6 +135,10 @@ h1{margin:0;}
 }
 #hiddenDiv li:hover{
     background-color: lightgoldenrodyellow;
+}
+#hiddenDiv a {
+    text-decoration: none;
+    color: black;
 }
 
 
