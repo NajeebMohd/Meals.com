@@ -8,8 +8,9 @@ function fetchImg(Img,detail){
         var json = JSON.parse(request.response); 
         var imageURL = json.meals[0].strMealThumb;
         var name = json.meals[0].strMeal;
-        detail.innerText = name;
+        detail.innerText = name+'';
         Img.src = imageURL;
+        console.log(json,' tisss');
     }
     request.onerror = function(){
         console.log("UNABLE TO FETCH..");
@@ -18,9 +19,11 @@ function fetchImg(Img,detail){
     request.send();
 }
 for(var i = 0; i < FrontImg.length; i++){
-    fetchImg(FrontImg[i], Imgdetails[i]);   
+    fetchImg(FrontImg[i], Imgdetails[i]); // for fetching image and name  
 }
 
+
+/// A2---------->> for the small screen nav bar button
 var navButton = document.getElementById('barButton');
 var hiddenDiv = document.getElementById('hiddenDiv');
 var barclick = false;
@@ -34,4 +37,6 @@ navButton.addEventListener('click',function(){
     }  
     
 });
+
+/// finished A2
 
