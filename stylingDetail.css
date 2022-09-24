@@ -1,0 +1,566 @@
+body{margin:0;}
+h1{margin:0;}
+#navbar{
+    position: fixed;
+    height: 8vh;
+    width: 100vw;
+    /* border: 2px solid black; */
+    
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5913e;
+    background-color: #ff7b0d;
+    /* background-color: #fa8a2d; */
+}
+#Icon img{
+    height: 100%;
+    width: 55px;
+}
+#Icon{
+    height: 100%;
+    width: 25%;
+    min-width: 200px;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    
+    
+    
+}
+#Icon h2{
+    margin-left: 8px;
+    letter-spacing: 1px;
+    font-family:cursive;
+}
+#navLists{
+    height: 100%;
+    width: 25%;
+    
+    /* border:2px solid black; */
+}
+#navLists ul{    
+    list-style-type: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+}
+#navLists ul li{       
+    margin: 0;
+    padding:0;    
+    /* display: inline; */
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    height: 50%;
+    width: auto;
+    padding: 2%;
+    border-radius: 1rem;
+}
+#navLists a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: cursive;
+    
+}
+#navLists li:hover{
+    background-color:lightgoldenrodyellow;
+}
+#search{
+    height: 70%;
+    width: 70%;
+}
+#searchBox{
+    height: 100%;
+    width: 15%;    
+    display: flex;
+    align-items: center;
+    /* justify-content: center;    */
+    /* border: 2px solid black;  */
+}
+#searchBox button{
+    height: 70%;
+    width: 20%;
+}
+
+#bar{
+    
+    height: 100%;
+    width: 90px;
+    /* border:2px solid black; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: none;
+}
+#bar button{
+    height: 70%;
+    width: 70%;
+    background-color: #fc8019;
+    /* border-color: white; */
+}
+#bar i{
+    color: aliceblue;
+}
+
+/* ------------------------------HIDDEN DIV -------------------------------------------- */
+
+#hiddenDiv{
+    height: 40vh;
+    width: 100vw;
+    background-color: #ffab66;
+    display: none;
+}
+#hiddenDiv ul{
+    margin: 0;
+    list-style-type: none;
+    padding-top:65px;
+    
+}
+#hiddenDiv li{
+    padding:20px;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    border-top:1px solid black;
+    font-family: cursive;
+    font-weight: 500;
+}
+#hiddenDiv li:hover{
+    background-color: lightgoldenrodyellow;
+}
+
+
+/* ----------------------------- HEADER ------------------------------------------------------ */
+
+
+header{
+    height: 60vh;
+    width: 100vw;
+    background-image: url(images/imageE1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* opacity: 0.8; */
+}
+#name{
+    height: 20%;
+    width: 90%;
+    margin-top: 8%;
+    /* border: 2px solid black; */
+    text-align: center;
+}
+#name h1{
+    color:white;
+    font-size: 55px;
+    letter-spacing: 2px;
+    font-family: Okra, Helvetica, sans-serif;
+    
+}
+#discription{
+    height: 20%;
+    width: 90%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+#discription h2{
+    color:white;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-weight: 500;
+    font-family: cursive;
+    
+}
+#searchBox2{
+    height: 10%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+#search2{
+    height: 100%;
+    width: 50%;  
+
+}
+#btn2{
+    height: 100%;
+    width: 10%;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #fc8019;
+    color: white;
+    border: none;   
+    box-sizing:border-box;
+}
+
+#btn2:hover{
+    background-color: orangered;
+    color: black;
+}
+
+/* -----------------------------------For Main Page ------------------------------- */
+
+#container{
+    min-height: 600px;
+    height: auto;
+    width: 100vw;
+    background-color:#f5913e;
+    background-color: #ffab66;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:5%;
+}
+
+
+#conHead{
+    height: 10%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    /* border:2px solid black; */
+}
+#conHead h2{
+    font-family: cursive;
+    letter-spacing: 2px;
+    text-decoration: underline;
+
+}
+#randomImages{
+    display: none;
+    height: auto;
+    width: 70%;
+    /* min-height: 70%; */
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+
+}
+.randomIdiv{
+    height:364px;
+    width: 280px;
+    margin:3%;
+    margin-bottom: 8%;
+    padding: 0;
+    box-sizing: content-box;
+    /* overflow: hidden; */
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+}
+.randomIdiv img{
+    height: 280px;
+    width: 100%;
+    min-width: 280px;
+    /* background-color: yellow; */
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    
+}
+.userFav{    
+    height: 84px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rebeccapurple; */
+}
+
+
+.userFav span{
+    height: 50%;
+    width: 100%;
+    border-radius: 2rem;
+    /* display: inline-block; */
+    border: 1px solid black;
+    /* background-color: aqua; */
+    box-sizing: content-box;
+}
+.userFav button{
+    height: 100%;
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    display: inline;    
+    /* position: relative; */
+    /* border: 2px solid black; */
+}
+
+.Fbar{
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:#ff7b0d;
+    
+}
+.Fbar p{
+    margin:8px 0px 0px 80px;
+    font-family: cursive;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.FavBtn{
+    border-radius:2rem;
+}
+.FavBtn:hover{
+    background-color: orangered;
+}
+
+.ImageName p{
+    margin:0;
+    margin-left: 8px;
+    font-family: cursive;    
+    overflow-wrap: break-word;
+    text-align: center;
+}
+.ImageName{
+    border-bottom: none;    
+}
+.ImageName:hover{
+    background-color: lightgoldenrodyellow;
+}
+
+
+/* ----------------------------------FOR THE FOOTER OF PAGE ------------------------- */
+
+footer{
+    height: 30vh;
+    width: 100vw;
+    background-color: aqua;
+    background-color: #f5913e;
+    background-color: #ff7b0d;
+   
+}
+
+#socialMedia{
+    height: 30%;
+    width: 90%;
+    /* border:2px solid black; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+#socialMedia span{
+    height: 60px;
+    width: 60px;
+    min-width: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+    
+    
+}
+#socialMedia>div{
+    border-top: 2px solid black;
+    width: 40%;
+    height: 0;
+}
+#socialMedia span i{
+    
+}
+
+
+#contacts{
+    height: 70%;
+    width: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+#copyRight{
+    height: 30%;
+    width: 40%;
+    /* border: 2px solid black; */
+    display: flex;    
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 2%;
+}
+#About{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    
+    justify-content: center;
+    /* border: 2px solid black; */
+
+}
+#copyRight span{
+    height: 5%;
+    width: auto;    
+    font-weight: 400;
+    font-family:cursive;
+}
+#copyRight p{
+    font-size: small;
+    margin: 0;
+    text-align: center;
+}
+
+#About ul{
+    list-style-type: none;
+    margin: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* border:2px solid black; */
+    padding: 0;
+    
+    
+}
+#About ul li{
+    
+    font-size: 1rem;
+    font-family: cursive;
+    padding:0px 15px 0px;
+    border-left:2px solid black;
+
+}
+#About ul a{
+    text-decoration: none;
+    color:black;
+}
+#About ul a:hover{
+    color:lightgoldenrodyellow;
+    text-decoration: underline;
+}
+
+
+
+
+/* ----------------------------------FOR RELIABLE SCREENS----------------------------- */
+
+@media screen and (max-width:1200px) {
+    #Icon{
+
+    }   
+    #navLists{
+        width: 40%;
+    } 
+    #navLists ul{
+        justify-content: space-between;
+    }
+    #searchBox{
+        width:18%
+
+    }
+    #search2{
+        width: 60%;
+    }
+    #btn2{
+        width: 15%;
+    }
+    #discription h2{
+        font-size:1.3rem;
+    }
+    #name{
+        margin-top: 12%;
+    }
+
+    
+}
+@media screen and (max-width:900px) {
+    #Icon{
+        width: 30%;
+    }   
+    #navLists{
+        width: 50%;
+    } 
+    #navLists ul{
+        justify-content: space-around;
+    }
+    #searchBox{
+        width:20%
+
+    }
+    #search2{
+        width: 80%;
+    }
+    #btn2{
+        width: 20%;
+    }
+    #discription h2{
+        font-size:1.1rem;
+    }
+    #name{
+        margin-top: 20%;
+    }
+    
+}
+@media screen and (max-width:768px) {
+    #bar{
+        display: block;        
+        
+    }
+    #navLists{
+        display: none;
+    }
+    #searchBox{
+        display: none;
+    }
+    #navbar{
+        justify-content:space-between;
+    }
+    #searchBox2{
+        width: 80%;
+    }
+    #search2{
+        width:75%;
+    }
+    #btn2{
+        width: 25%;
+    }
+    #name{
+        text-align:center;
+        width: 80%;
+    }
+    #name h1{
+        font-size:45px;
+        
+    }
+    #discription{
+        width: 68%;
+        text-align: start;
+        font-weight: 300;
+        word-spacing: 2px;
+        font-size: small;
+        margin-bottom: 40px;
+    }
+    #bar{
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+}
