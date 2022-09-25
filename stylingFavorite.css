@@ -148,84 +148,24 @@ h1{margin:0;}
 
 
 /* -----------------------------------For Main Page ------------------------------- */
-
 #container{
     min-height: 70vh;
-    height: auto;
+    height: auto;    
     width: 100vw;
-    /* border: 2px solid black; */
-    padding-top: 12vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color: #ffab66;
-    
+    /* border:2px solid black; */
 }
 #AddingDiv{
-    height: 100%;    
-    width: 70%;
-    border:2px solid black;
-    display: none;
-    /* background-color: rebeccapurple; */
-}
-#mealname{
-    height: 5%;
-    width: 70%;
-    /* border: 2px solid black; */
-}
-#imageDiv{
-    height:35%;
-    width: 70%;
-    /* border: 2px solid black; */
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3%;
-}
-#instruction{
-    min-height: 60%;
+    min-height: 700px;
     height: auto;
     width: 70%;
+    min-width: 320px;
     /* border: 2px solid black; */
-    margin-bottom: 5%;
-}
-#imageDiv img{
-    height: 100%;
-    width: 60%;
-    border-radius: 1.5rem;
-}
-#mealname p{
-    text-align: center;
-    font-family: cursive;
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-wrap: wrap;
 
-
-}
-
-#instruction p{
-    font-family: cursive;
-    word-spacing: 3px;
-    font-size: large;
-    text-align: center;
-    
-    
-}
-#instruction p::first-line{
-   
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: orangered;
-        
-}
-#instruction h2{
-    font-family: cursive;
-    word-spacing: 1px;
-    text-align: center;
-    letter-spacing: 1px;
-    border-bottom: 2px solid black;
-    padding-bottom: 20px;
 }
 
 

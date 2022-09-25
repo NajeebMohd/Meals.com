@@ -223,6 +223,7 @@ header{
 
 #container{
     height: auto;
+    min-height: 30vh;
     width: 100vw;
     background-color:#f5913e;
     background-color: #ffab66;
