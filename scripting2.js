@@ -19,11 +19,19 @@ function fetch(image,Iname,para){
         console.log('error unable to fetch the image');
     }
 
-    request.open('get','https://www.themealdb.com/api/json/v1/1/random.php',true);
+    
+    const id = (window.location.search).substring(4);
+    console.log(id);
+    if(id == ''){
+        request.open('get','https://www.themealdb.com/api/json/v1/1/random.php',true);
+    }else{
+        request.open('get','https://www.themealdb.com/api/json/v1/1/lookup.php?i='+id,true);
+    }
+    
+    
     request.send();
+    
 }
-
-
 
 fetch(image,Iname,para);
 
@@ -46,4 +54,3 @@ navButton.addEventListener('click',function(){
 });
 
 /// finished A2
-

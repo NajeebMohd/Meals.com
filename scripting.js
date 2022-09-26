@@ -19,6 +19,11 @@ function fetchImg(Img,detail){
         detail.innerText = name;
         Img.src = imageURL;
         // console.log(json,' tisss');  // Video Explanation how to fetch from json
+       
+        Img.addEventListener('click',function(){
+            goToDetails(json.meals[0].idMeal);
+        });
+
     }
     request.onerror = function(){
         console.log("UNABLE TO FETCH..");
@@ -26,7 +31,7 @@ function fetchImg(Img,detail){
     request.open('get','https://www.themealdb.com/api/json/v1/1/random.php',true);
     request.send();
 }
-for(var i = 0; i < FrontImg.length; i++){
+for(let i = 0; i < FrontImg.length; i++){
     fetchImg(FrontImg[i], Imgdetails[i]); // for fetching image and name  
 }
 
@@ -77,8 +82,11 @@ btn2.addEventListener('click',function(){
                 // if(Meals.length === 0) window.alert('sorry no Meals for '+search2.value);
                 for(var i = 0; i < Meals.length; i++){                    
                                          
-                    container.appendChild(Element(Meals[i].strMeal, Meals[i].strMealThumb));
-                    console.log(Meals[i].strMeal);                     
+                    container.appendChild(Element(Meals[i].strMeal, Meals[i].strMealThumb, Meals[i].idMeal));
+                    console.log(Meals[i]);//for video explanation 
+
+                    
+                                      
                     
                 }
             }
@@ -95,7 +103,17 @@ btn2.addEventListener('click',function(){
 // btn.addEventListener('click',Searched(search.value));
 // btn2.addEventListener('click',Searched(search2.value));
 
-function Element(name, link){
+
+function goToDetails(id){
+    console.log(id);
+    //window.location.href = "http://127.0.0.1:5500/indexDetail.html?id="+id;
+    window.location.href = "http://https://najeebmohd.github.io/Meals.com/indexDetail.html?id="+id;
+
+    //in hosting replace local host with gitHub host 
+}
+
+
+function Element(name, link,iD){
     const icon = document.createElement('i');
     icon.classList.add('fa-regular', 'fa-heart');
     const btn = document.createElement('button');
@@ -124,6 +142,12 @@ function Element(name, link){
 
     const Rdiv = document.createElement('div');
     Rdiv.classList.add('randomIdiv');
+
+    // for providing details
+    image.addEventListener('click',function(){
+        goToDetails(iD);
+    });
+    //
 
     Rdiv.append(image,userFav);
 

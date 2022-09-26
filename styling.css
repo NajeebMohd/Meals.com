@@ -283,6 +283,10 @@ header{
     border-radius: 1rem;
     
 }
+.randomIdiv img:hover{
+    height: 290px;
+    width: 105%;;
+}
 .userFav{    
     height: 84px;
     width: 100%;
