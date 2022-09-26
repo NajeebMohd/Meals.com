@@ -8,8 +8,12 @@ var search2 = document.getElementById('search2');
 // var randomIdiv = document.querySelectorAll('.randomIdiv');
 var container = document.getElementById('randomImages');
 
+
+var FavBtn = document.querySelectorAll('.FavBtn');
+
+
 // A1--------------------->> for Fetching random Images
-function fetchImg(Img,detail){
+function fetchImg(Img,detail,button){
     var request = new XMLHttpRequest();
     
     request.onload = function(){
@@ -20,8 +24,13 @@ function fetchImg(Img,detail){
         Img.src = imageURL;
         // console.log(json,' tisss');  // Video Explanation how to fetch from json
        
+        // for the detail page
         Img.addEventListener('click',function(){
             goToDetails(json.meals[0].idMeal);
+        });
+        // for favorite button
+        button.addEventListener('click',function(){
+            addToFavorite(json.meals[0].idMeal);
         });
 
     }
@@ -32,7 +41,7 @@ function fetchImg(Img,detail){
     request.send();
 }
 for(let i = 0; i < FrontImg.length; i++){
-    fetchImg(FrontImg[i], Imgdetails[i]); // for fetching image and name  
+    fetchImg(FrontImg[i], Imgdetails[i], FavBtn[i]); // for fetching image and name  
 }
 
 
@@ -107,9 +116,14 @@ btn2.addEventListener('click',function(){
 function goToDetails(id){
     console.log(id);
     //window.location.href = "http://127.0.0.1:5500/indexDetail.html?id="+id;
-    window.location.href = "http://https://najeebmohd.github.io/Meals.com/indexDetail.html?id="+id;
+    window.location.href = "https://najeebmohd.github.io/Meals.com/indexDetail.html?id="+id;
 
     //in hosting replace local host with gitHub host 
+}
+function addToFavorite(id){
+    //window.location.href = "http://127.0.0.1:5500/indexFavorite.html?id="+id;
+    window.location.href = "https://najeebmohd.github.io/Meals.com/indexFavorite.html?id="+id;
+    // add for favorite page
 }
 
 
@@ -143,10 +157,14 @@ function Element(name, link,iD){
     const Rdiv = document.createElement('div');
     Rdiv.classList.add('randomIdiv');
 
-    // for providing details
+    // for providing details and adding to the favorite
     image.addEventListener('click',function(){
         goToDetails(iD);
     });
+    btn.addEventListener('click',function(){
+        addToFavorite(iD);
+    });
+
     //
 
     Rdiv.append(image,userFav);
