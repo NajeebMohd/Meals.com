@@ -21,24 +21,42 @@ function addMeals(IDe){
 
     request.onload = function(){
         var json = JSON.parse(request.response);
+        //console.log(json);
         var imageURL = json.meals[0].strMealThumb;
         var name = json.meals[0].strMeal;
-        console.log(imageURL,name);
-        console.log(Element());
-        container.appendChild(Element(json.meals[0].strMealThumb, json.meals[0].strMeal));
-        
+        //console.log(imageURL,name);
+        //console.log(Element());
+        container.appendChild(Element(json.meals[0].strMealThumb, json.meals[0].strMeal));      
 
 
     }
     request.onerror = function(){
         console.log("Error Occured");
-    }
-    console.log(IDe);
+    }   
     request.open('get','https://www.themealdb.com/api/json/v1/1/lookup.php?i='+IDe,true);
     request.send();
+
+    var cut = document.querySelectorAll('.xMark');
+    var favDiv = document.querySelectorAll('.appendDiv');
+    console.log(cut,favDiv);
+    for(var i = 0; i < cut.length; i++){
+        // cut[i].addEventListener('click',function(){
+
+        //     container.removeChild(favDiv[i]);
+        // });
+        console.log(cut[i],favDiv[i]);
+    }
 }
 
-addMeals((window.location.search).substring(4));
+var gotid = localStorage.getItem('getid');
+//while(gotid != ''){
+    addMeals(gotid);
+//}
+var count = 0;
+console.log(++count,'this is the rate');
+
+
+
 
 function Element(link,name){
     const icon = document.createElement('i');

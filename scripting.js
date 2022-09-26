@@ -79,6 +79,7 @@ btn2.addEventListener('click',function(){
             container.removeChild(child);
             child = container.lastElementChild;
         }
+        document.getElementById('conHead').style.display = 'none';
         //console.log('inside search 2');
         searchFun();
         function searchFun(){
@@ -92,9 +93,7 @@ btn2.addEventListener('click',function(){
                 for(var i = 0; i < Meals.length; i++){                    
                                          
                     container.appendChild(Element(Meals[i].strMeal, Meals[i].strMealThumb, Meals[i].idMeal));
-                    console.log(Meals[i]);//for video explanation 
-
-                    
+                    console.log(Meals[i]);//for video explanation                   
                                       
                     
                 }
@@ -113,17 +112,18 @@ btn2.addEventListener('click',function(){
 // btn2.addEventListener('click',Searched(search2.value));
 
 
-function goToDetails(id){
-    console.log(id);
+function goToDetails(id){   
+    
+    
     //window.location.href = "http://127.0.0.1:5500/indexDetail.html?id="+id;
     window.location.href = "https://najeebmohd.github.io/Meals.com/indexDetail.html?id="+id;
 
     //in hosting replace local host with gitHub host 
 }
-function addToFavorite(id){
-    //window.location.href = "http://127.0.0.1:5500/indexFavorite.html?id="+id;
-    window.location.href = "https://najeebmohd.github.io/Meals.com/indexFavorite.html?id="+id;
-    // add for favorite page
+function addToFavorite(id){    
+    var mealid = id;
+    localStorage.setItem('getid',mealid);
+    
 }
 
 
