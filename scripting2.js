@@ -1,3 +1,4 @@
+document.getElementById('DetailsButton').style.backgroundColor = 'lightgoldenrodyellow';
 var image = document.querySelector('#imageDiv img')
 var Iname = document.getElementById('nap');
 var para = document.querySelector('#instruction p');
@@ -49,6 +50,18 @@ navButton.addEventListener('click',function(){
     }else{
         hiddenDiv.style.display = 'none';
         barclick = false;
+    }
+    var currScroll = window.pageYOffset;
+    if(currScroll > 0){
+        console.log(currScroll);
+        var scrollinterval = setInterval(function(){
+            if(currScroll < 0){
+              clearInterval(scrollinterval);
+              return;
+            }    
+            window.scrollBy(0,-80);
+            currScroll -= 80;
+        },5);         
     }  
     
 });

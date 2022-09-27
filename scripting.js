@@ -1,3 +1,4 @@
+document.getElementById('HomeButton').style.backgroundColor = 'lightgoldenrodyellow';
 var FrontImg = document.querySelectorAll('.randomIdiv img');
 var Imgdetails = document.querySelectorAll('.ImageName p');
 
@@ -30,6 +31,7 @@ function fetchImg(Img,detail,button){
         });
         // for favorite button
         button.addEventListener('click',function(){
+            button.style.backgroundColor = 'orangered';
             addToFavorite(json.meals[0].idMeal);
         });
 
@@ -50,6 +52,7 @@ var navButton = document.getElementById('barButton');
 var hiddenDiv = document.getElementById('hiddenDiv');
 var barclick = false;
 navButton.addEventListener('click',function(){
+    
     if(!barclick){
         hiddenDiv.style.display = 'block';
         barclick = true;
@@ -57,13 +60,25 @@ navButton.addEventListener('click',function(){
         hiddenDiv.style.display = 'none';
         barclick = false;
     }  
+    var currScroll = window.pageYOffset;
+    if(currScroll > 0){
+        console.log(currScroll);
+        var scrollinterval = setInterval(function(){
+            if(currScroll < 0){
+              clearInterval(scrollinterval);
+              return;
+            }    
+            window.scrollBy(0,-80);
+            currScroll -= 80;
+        },5);         
+    }
     
 });
 /// finished A2
 
 
 
-// A3 start --for search
+// A3 start --for search of any meals-------------------------------------------
 // function Searched(typed){
 //     
         
@@ -73,13 +88,15 @@ btn2.addEventListener('click',function(){
     //console.log('inside search 1')
     if(search2.value == ''){
         window.alert('Fill the value in the search');
-    }else{           
+    }else{
+        //container.style.padding = "40px";           
         var child = container.lastElementChild; 
         while (child) {
             container.removeChild(child);
             child = container.lastElementChild;
         }
-        document.getElementById('conHead').style.display = 'none';
+        //document.getElementById('conHead').style.display = 'none';
+        document.querySelector('#conHead h2').textContent = 'Search Results';
         //console.log('inside search 2');
         searchFun();
         function searchFun(){
@@ -112,21 +129,30 @@ btn2.addEventListener('click',function(){
 // btn2.addEventListener('click',Searched(search2.value));
 
 
-function goToDetails(id){   
-    
-    
+//         -------------------------ENDED A3 ----------------------------------------- //
+
+
+function goToDetails(id){       
     //window.location.href = "http://127.0.0.1:5500/indexDetail.html?id="+id;
     window.location.href = "https://najeebmohd.github.io/Meals.com/indexDetail.html?id="+id;
 
     //in hosting replace local host with gitHub host 
 }
+var FavList = [];
 function addToFavorite(id){    
-    var mealid = id;
-    localStorage.setItem('getid',mealid);
+    //var mealid = id;
+    FavList.push(id);
+    localStorage.setItem('getid',FavList);
+    for(var i = 0; i < FavList.length; i++){
+        console.log(FavList[i],'my lists');        
+    }   
     
 }
 
 
+
+
+//                ------------------------ FOR APPENDING THE NEW DIV --------------------------
 function Element(name, link,iD){
     const icon = document.createElement('i');
     icon.classList.add('fa-regular', 'fa-heart');
@@ -162,13 +188,13 @@ function Element(name, link,iD){
         goToDetails(iD);
     });
     btn.addEventListener('click',function(){
+        btn.style.backgroundColor = "orangered";
         addToFavorite(iD);
-    });
-
-    //
+    });   
 
     Rdiv.append(image,userFav);
 
     return Rdiv;
 }
-// end A3
+
+//          ----------------------------- ENDED THE APPENDING THE ELEMENT ----------------

@@ -241,7 +241,7 @@ footer{
     justify-content: center;
     
 }
-#socialMedia span{
+/* #socialMedia span{
     height: 60px;
     width: 60px;
     min-width: 50px;
@@ -251,6 +251,20 @@ footer{
     
     
     
+} */
+#socialMedia span{
+    height: 30px;
+    width: 60px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 13px;
+    border-radius: 50%;    
+}
+#socialMedia span:hover{
+    background-color: lightgoldenrodyellow;
 }
 #socialMedia>div{
     border-top: 2px solid black;

@@ -71,6 +71,7 @@ h1{margin:0;}
 }
 #navLists li:hover{
     background-color:lightgoldenrodyellow;
+    
 }
 #search{
     height: 70%;
@@ -375,15 +376,18 @@ footer{
     
 }
 #socialMedia span{
-    height: 60px;
+    height: 30px;
     width: 60px;
     min-width: 50px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    
-    
-    
+    position: relative;
+    top:13px;
+    border-radius: 50%;    
+}
+#socialMedia span:hover{
+    background-color: lightgoldenrodyellow;
 }
 #socialMedia>div{
     border-top: 2px solid black;
@@ -568,6 +572,24 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .ImageName p{
+        font-size: large;
+        height: auto;
+        overflow-wrap: normal;
+    }
+    .userFav .ImageName{
+        height: auto;
+        /* max-height: auto;         */
+    }
+    .userFav .Fbar{
+        height: 38px;
+    }
+    .userFav{
+        height: auto;
+    }
+    .randomIdiv{
+        height: auto;
     }
     
     
