@@ -140,7 +140,7 @@ h1{margin:0;}
     width: 290px;
 }
 #hiddenDiv li:hover{
-    background-color:darkgray;
+    background-color:#ffab66;
 }
 #hiddenDiv a {
     text-decoration: none;

@@ -135,7 +135,7 @@ h1{margin:0;}
     font-weight: 500;
 }
 #hiddenDiv li:hover{
-    background-color: darkgray;
+    background-color:#ffab66;
 }
 #hiddenDiv a {
     text-decoration: none;
