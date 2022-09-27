@@ -118,28 +118,35 @@ h1{margin:0;}
     height: 40vh;
     width: 100vw;
     background-color: #ffab66;
+    background-color: #f8b781;
+    background-color: lightgoldenrodyellow;
     display: none;
 }
 #hiddenDiv ul{
     margin: 0;
     list-style-type: none;
-    padding-top:65px;
+    padding-top:60px;
     
 }
 #hiddenDiv li{
-    padding:20px;
-    border-radius: 0.4rem;
+    padding:20px;    
     font-size: 1rem;
-    border-top:1px solid black;
+    border-top:2px solid black;
     font-family: cursive;
     font-weight: 500;
 }
+#hiddenDiv li a{
+    height: 22px;
+    width: 290px;
+}
 #hiddenDiv li:hover{
-    background-color: lightgoldenrodyellow;
+    background-color:darkgray;
 }
 #hiddenDiv a {
     text-decoration: none;
     color: black;
+    font-size: larger;
+    letter-spacing: 1px;
 }
 
 
@@ -375,6 +382,10 @@ footer{
     justify-content: center;
     
 }
+#socialMedia a{
+    text-decoration: none;
+    color:black;
+}
 #socialMedia span{
     height: 30px;
     width: 60px;
@@ -561,12 +572,10 @@ footer{
     }
     #discription{
         width: 68%;
-        text-align: start;
-        font-weight: 300;
-        word-spacing: 2px;
-        font-size: small;
+        text-align: start;        
         margin-bottom: 40px;
     }
+    
     #bar{
         margin-right: 10px;
         display: flex;
@@ -574,13 +583,15 @@ footer{
         justify-content: center;
     }
     .ImageName p{
-        font-size: large;
+        font-size: larger;
+        letter-spacing: 1px;
+        word-spacing: 3px;
         height: auto;
         overflow-wrap: normal;
     }
     .userFav .ImageName{
         height: auto;
-        /* max-height: auto;         */
+        
     }
     .userFav .Fbar{
         height: 38px;
@@ -590,7 +601,6 @@ footer{
     }
     .randomIdiv{
         height: auto;
-    }
-    
+    }    
     
 }

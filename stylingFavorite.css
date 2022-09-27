@@ -117,28 +117,31 @@ h1{margin:0;}
     height: 40vh;
     width: 100vw;
     background-color: #ffab66;
+    background-color: lightgoldenrodyellow;
     display: none;
 }
 #hiddenDiv ul{
     margin: 0;
     list-style-type: none;
-    padding-top:65px;
+    padding-top:60px;
     
 }
 #hiddenDiv li{
     padding:20px;
-    border-radius: 0.4rem;
+    
     font-size: 1rem;
-    border-top:1px solid black;
+    border-top:2px solid black;
     font-family: cursive;
     font-weight: 500;
 }
 #hiddenDiv li:hover{
-    background-color: lightgoldenrodyellow;
+    background-color: darkgray;
 }
 #hiddenDiv a {
     text-decoration: none;
     color: black;
+    font-size: larger;
+    letter-spacing: 1px;
 }
 
 
@@ -240,6 +243,10 @@ footer{
     align-items: flex-end;
     justify-content: center;
     
+}
+#socialMedia a{
+    text-decoration: none;
+    color:black;
 }
 /* #socialMedia span{
     height: 60px;
