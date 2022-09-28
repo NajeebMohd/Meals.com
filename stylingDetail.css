@@ -3,15 +3,13 @@ h1{margin:0;}
 #navbar{
     position: fixed;
     height: 8vh;
-    width: 100vw;
-    /* border: 2px solid black; */
-    
+    width: 100vw;    
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: #f5913e;
     background-color: #ff7b0d;
-    /* background-color: #fa8a2d; */
+    
 }
 #Icon img{
     height: 100%;
@@ -20,11 +18,10 @@ h1{margin:0;}
 #Icon{
     height: 100%;
     width: 25%;
-    min-width: 200px;
-    /* border: 2px solid black; */
+    min-width: 200px;    
     display: flex;
     align-items: center;
-    
+    margin-right: 10%;
     
     
 }
@@ -35,9 +32,8 @@ h1{margin:0;}
 }
 #navLists{
     height: 100%;
-    width: 25%;
+    width: 45%;  
     
-    /* border:2px solid black; */
 }
 #navLists ul{    
     list-style-type: none;
@@ -46,12 +42,11 @@ h1{margin:0;}
     padding: 0;
     display: flex;
     align-items: center;    
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #navLists ul li{       
     margin: 0;
-    padding:0;    
-    /* display: inline; */
+    padding:0;        
     display: flex;
     align-items:center;
     justify-content: space-around;
@@ -82,8 +77,7 @@ h1{margin:0;}
     width: 15%;    
     display: flex;
     align-items: center;
-    /* justify-content: center;    */
-    /* border: 2px solid black;  */
+    display: none;    
 }
 #searchBox button{
     height: 70%;
@@ -91,21 +85,15 @@ h1{margin:0;}
     border-radius: 0.5rem;
 }
 
-#bar{
-    
+#bar{    
     height: 100%;
-    width: 90px;
-    /* border:2px solid black; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    width: 90px;    
     display: none;
 }
 #bar button{
     height: 70%;
     width: 70%;
-    background-color: #fc8019;
-    /* border-color: white; */
+    background-color: #fc8019;    
 }
 #bar i{
     color: aliceblue;
@@ -115,8 +103,7 @@ h1{margin:0;}
 
 #hiddenDiv{
     height: 40vh;
-    width: 100vw;
-    background-color: #ffab66;
+    width: 100vw;    
     background-color: lightgoldenrodyellow;
     display: none;
 }
@@ -144,18 +131,12 @@ h1{margin:0;}
 }
 
 
-/* ----------------------------- HEADER ------------------------------------------------------ */
-
-
-
-
 /* -----------------------------------For Main Page ------------------------------- */
 
 #container{
     min-height: 150vh;
     height: auto;
-    width: 100vw;
-    /* border: 2px solid black; */
+    width: 100vw;    
     padding-top: 100px;
     display: flex;
     flex-direction: column;
@@ -166,12 +147,11 @@ h1{margin:0;}
 #mealname{
     height: 5%;
     width: 70%;
-    /* border: 2px solid black; */
+    
 }
 #imageDiv{
     height:35%;
-    width: 70%;
-    /* border: 2px solid black; */
+    width: 70%;    
     display: flex;
     justify-content: center;
     margin-bottom: 3%;
@@ -179,8 +159,7 @@ h1{margin:0;}
 #instruction{
     min-height: 60%;
     height: auto;
-    width: 70%;
-    /* border: 2px solid black; */
+    width: 70%;    
     margin-bottom: 5%;
 }
 #imageDiv img{
@@ -227,17 +206,14 @@ h1{margin:0;}
 
 footer{
     height: 30vh;
-    width: 100vw;
-    background-color: aqua;
-    background-color: #f5913e;
+    width: 100vw;    
     background-color: #ff7b0d;
    
 }
 
 #socialMedia{
     height: 30%;
-    width: 90%;
-    /* border:2px solid black; */
+    width: 90%;    
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -264,26 +240,22 @@ footer{
 #socialMedia>div{
     border-top: 2px solid black;
     width: 40%;
+    min-width: 13%;
     height: 0;
-}
-#socialMedia span i{
-    
 }
 
 
 #contacts{
     height: 70%;
-    width: 100%;
-    /* border: 2px solid black; */
+    width: 100%;   
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    
 }
 #copyRight{
     height: 30%;
-    width: 40%;
-    /* border: 2px solid black; */
+    width: 40%;    
     display: flex;    
     align-items: flex-end;
     justify-content: center;
@@ -292,10 +264,8 @@ footer{
 #About{
     height: 40%;
     width: 100%;
-    display: flex;
-    
-    justify-content: center;
-    /* border: 2px solid black; */
+    display: flex;    
+    justify-content: center;   
 
 }
 #copyRight span{
@@ -315,14 +285,12 @@ footer{
     margin: 10px;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    /* border:2px solid black; */
+    justify-content: center;   
     padding: 0;
     
     
 }
-#About ul li{
-    
+#About ul li{    
     font-size: 1rem;
     font-family: cursive;
     padding:0px 15px 0px;
@@ -343,12 +311,9 @@ footer{
 
 /* ----------------------------------FOR RELIABLE SCREENS----------------------------- */
 
-@media screen and (max-width:1200px) {
-    #Icon{
-
-    }   
+@media screen and (max-width:1200px) {      
     #navLists{
-        width: 40%;
+        width: 60%;
     } 
     #navLists ul{
         justify-content: space-between;
